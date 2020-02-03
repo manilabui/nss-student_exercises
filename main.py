@@ -25,13 +25,13 @@ students = [student_1, student_2, student_3, student_4]
 instructors = [instructor_1, instructor_2, instructor_3]
 
 for student in students:
-		student.set_cohort(cohort_1)
+    student.set_cohort(cohort_1)
 
 for instructor in instructors:
-		instructor.set_cohort(cohort_1)
+    instructor.set_cohort(cohort_1)
 
 instructor_1.assign_exercises(students, [exercise_3, exercise_4])
 instructor_2.assign_exercises(students, [exercise_1, exercise_2])
 
 for student in students:
-		print(student)
+    print(student)
