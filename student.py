@@ -1,18 +1,9 @@
 class Student:
-    def __init__(self, first_name, last_name):
-        self.first_name = first_name
-        self.last_name = last_name
-        self.exercises = list()
-
-    def __str__(self):
-        exercise_names = ('\n * ').join([ exercise.name for exercise in self.exercises ])
-        return f'{self.first_name} {self.last_name} is working on: \n * {exercise_names}'
-
-    def add_slack(self, handle):
-        self.slack = handle
-
-    def set_cohort(self, cohort):
+    def __init__(self, first, last, handle, cohort):
+        self.first_name = first
+        self.last_name = last
+        self.slack_handle = handle
         self.cohort = cohort
 
-    def add_exercises(self, exercises):
-        self.exercises.extend(exercises)
+    def __repr__(self):
+        return f'{self.first_name} {self.last_name} is in {self.cohort}'
